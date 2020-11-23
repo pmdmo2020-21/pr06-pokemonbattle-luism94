@@ -7,6 +7,88 @@
     android:layout_height="match_parent"
     tools:context=".ui.battle.BattleActivity">
 
-    <!-- TODO -->
+    <Button
+        android:id="@+id/main_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/main_fight_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_hint" />
+
+    <TextView
+        android:id="@+id/lbl_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/lbl_hint"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_pkmn2" />
+
+    <LinearLayout
+        android:id="@+id/main_pkmn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_pkmn_1">
+
+        <TextView
+            android:id="@+id/lbl_pkmn2_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="64dp"
+            android:layout_weight="1"
+            android:text="@string/lbl_pkmn2_name"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/main_pkmn2_icon"
+            android:layout_width="0dp"
+            android:layout_height="178dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/pikachu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_pkmn_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/main_pkmn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/main_pkmn1_icon"
+            android:layout_width="0dp"
+            android:layout_height="178dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/gyarados" />
+
+        <TextView
+            android:id="@+id/lbl_pkmn1_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="64dp"
+            android:layout_weight="1"
+            android:text="@string/lbl_pkmn1_name"
+            android:textSize="30sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
